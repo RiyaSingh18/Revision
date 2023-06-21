@@ -1,0 +1,30 @@
+.loading {
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+
+  z-index: 999 !important;
+}
+
+.p-ml {
+  margin-left: 5px;
+}
+
+.pi {
+  font-size: 3rem !important;
+  color: #FFC107 !important;
+}
+
+.p-dialog .p-dialog-header {
+  padding: 3px !important;
+}
+
+/*.body-container {
+  height: 300px;
+  overflow-y: scroll;
+}*/
+/*.ui-table-scrollable-body {
+  max-height: 400px;
+  overflow-y: auto;
+}*/

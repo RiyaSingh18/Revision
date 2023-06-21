@@ -18,6 +18,8 @@ import { CardModule } from 'primeng/card';
 
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [],
   imports: [
@@ -38,6 +40,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     CardModule,
     CheckboxModule,
     RadioButtonModule,
+    ProgressSpinnerModule,
+    ButtonModule,
   ],
   exports: [
     SidebarModule,
@@ -57,6 +61,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     CardModule,
     CheckboxModule,
     RadioButtonModule,
+    ProgressSpinnerModule,
+    ButtonModule,
   ],
 })
 export class PrimeModule {}

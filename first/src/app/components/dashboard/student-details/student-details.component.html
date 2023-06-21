@@ -1,4 +1,48 @@
-<h2>Record</h2>
-<p-card>
+<p-progressSpinner aria-label="Loading" class="loading" *ngIf="showloader"></p-progressSpinner>
+<h2>TODOS RECORD</h2>
+<div class="table-container">
+  <p-table [value]="todosList" [scrollable]="true" scrollHeight="400px">
+    <ng-template pTemplate="header" class="header-container">
+      <!-- column headers -->
+      <tr>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+        <th></th>
+        <th></th>
 
-</p-card>
+        <!-- more columns -->
+
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-data>
+      <!-- table body -->
+
+      <tr>
+        <td>{{data.userId}}</td>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td [ngStyle]="{'color': data.completed ? 'green' : 'red'}">{{data.completed}}</td>
+
+        <td><button pButton pRipple label="Delete" (click)="deleteRecord(data)" class="p-button-success"></button>
+        </td>
+
+
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+
+<p-dialog header="" [(visible)]="displayDialog" [modal]="true" [closable]="false">
+  <div class="dialog-content">
+    <i class="pi pi-exclamation-triangle"></i>
+    <p>Are you sure you want to proceed?</p>
+  </div>
+  <footer>
+    <button pButton type="button" label="Cancel" (click)="hideDialog()"></button>
+    <button class="p-ml" pButton type="button" label="Confirm" (click)="confirmAction()"></button>
+  </footer>
+</p-dialog>

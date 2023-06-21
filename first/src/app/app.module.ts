@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ButtonModule } from 'primeng/button';
+
 import { AuthModule } from './module/authmodule';
 import { DashboardModule } from './module/dashboardmodule';
 import { LoginComponent } from './components/auth/login/login.component';
@@ -14,7 +14,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './components/auth/auth/auth.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { PrimeModule } from './module/primemodule';
-
+import { DataService } from './services/data.service';
+import { AuthService } from './services/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +31,15 @@ import { PrimeModule } from './module/primemodule';
   ],
   imports: [
     BrowserModule,
-    ButtonModule,
+    BrowserAnimationsModule,
     AuthModule,
     DashboardModule,
     FormsModule,
     ReactiveFormsModule,
     PrimeModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DataService, AuthService, ConfirmationService, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

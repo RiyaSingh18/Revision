@@ -1,4 +1,17 @@
-.formwrapper {
-  margin: 50px 50px;
-  display: flex;
-}
+ .fromwrap {
+   display: flex !important;
+ }
+
+ .form-group {
+   margin-left: 10px;
+ }
+
+ .tabledata p-checkbox {
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .check {
+   margin-top: 61px !important;
+ }

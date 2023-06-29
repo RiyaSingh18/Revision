@@ -31,12 +31,12 @@ export class CoursesComponent {
   savedata(data: any) {
     console.log(data);
   }
-  checkeditems(check: any) {
-    //this.multicheck = !this.multicheck;
-    if (this.multicheck) {
-      console.log('checked' + check);
-    } else {
-      console.log('not checked' + check);
-    }
-  }
+  //checkeditems(check: any) {
+  //  this.multicheck = !this.multicheck;
+  //  if (this.multicheck) {
+  //    console.log('checked' + check);
+  //  } else {
+  //    console.log('not checked' + check);
+  //  }
+  //}
 }

@@ -4,6 +4,7 @@ import { CoursesComponent } from '../components/dashboard/courses/courses.compon
 import { StudentDetailsComponent } from '../components/dashboard/student-details/student-details.component';
 import { DashboardComponent } from '../components/dashboard/dashboard/dashboard.component';
 import { CourseAuditComponent } from '../components/dashboard/course-audit/course-audit.component';
+import { CourseSummaryComponent } from '../components/dashboard/course-summary/course-summary.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'courses', component: CoursesComponent },
       { path: 'stu-detail', component: StudentDetailsComponent },
       { path: 'course-audit', component: CourseAuditComponent },
+      { path: 'course-summary', component: CourseSummaryComponent },
     ],
   },
 ];

@@ -1,34 +1,68 @@
-<div class="formwrapper">
-  <div class="form-group">
-    <div>
-      <label for="id">Id</label>
-    </div>
-    <div>
-      <input type="number" pInputText placeholder="Enter your id" />
-    </div>
+<div class="formwrapper mt-5">
+  <div class="btnswrap">
+    <button pButton pRipple label="Execute Query" class="p-button-primary"></button>
   </div>
-  <div class="form-group ">
-    <div>
-      <label for="name">Name</label>
+  <form [formGroup]="userForm" (ngSubmit)="savedata(this.userForm.value)">
+    <div class="formwrap mt-5" style="display:flex">
+      <div class="form-group">
+        <div>
+          <label for="id">Id</label>
+        </div>
+        <div>
+          <input type="number" pInputText formControlName="id" placeholder="Enter your id" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label for="name">Name</label>
+        </div>
+        <div>
+          <input type="text" pInputText formControlName="username" placeholder="Enter your name" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label for="email">Email</label>
+        </div>
+        <div>
+          <input type="email" pInputText formControlName="email" placeholder="Enter your email" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label for="city">City</label>
+        </div>
+        <div>
+          <input type="text" pInputText formControlName="city" placeholder="Enter your city" />
+        </div>
+      </div>
     </div>
-    <div>
-      <input type="text" id="name" name="name" pInputText placeholder="Enter your name" />
+    <div class="btn">
+      <button pButton pRipple label="Submit" class="p-button-success"></button>
     </div>
-  </div>
-  <div class="form-group ">
-    <div>
-      <label for="email">Email</label>
-    </div>
-    <div>
-      <input type="email" pInputText placeholder="Enter your email" />
-    </div>
-  </div>
-  <div class="form-group paddingText">
-    <div>
-      <label for="city">City</label>
-    </div>
-    <div>
-      <input type="text" pInputText placeholder="Enter your city" />
-    </div>
+
+  </form>
+  <div class="tabledata">
+    <p-table [value]="postsdata" [scrollable]="true" scrollHeight="400px">
+      <ng-template pTemplate="header">
+        <tr>
+          <p-checkbox class="pt-3"></p-checkbox>
+          <th>userId</th>
+          <th>id</th>
+          <th>title</th>
+          <th>body</th>
+
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-posts>
+        <tr>
+          <p-checkbox [(ngModel)]="posts.multicheck" (click)="checkeditems(posts.id)" class="check"></p-checkbox>
+          <td>{{posts.userId}}</td>
+          <td>{{posts.id}}</td>
+          <td>{{posts.title}}</td>
+          <td>{{posts.body}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
   </div>
 </div>

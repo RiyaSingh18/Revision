@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CourseAuditComponent } from './components/dashboard/course-audit/course-audit.component';
+import { CourseSummaryComponent } from './components/dashboard/course-summary/course-summary.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { CourseAuditComponent } from './components/dashboard/course-audit/course
     AuthComponent,
     DashboardComponent,
     CourseAuditComponent,
+    CourseSummaryComponent,
   ],
   imports: [
     BrowserModule,
